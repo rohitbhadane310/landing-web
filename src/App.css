@@ -1,38 +1,764 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+    --orange: #FF7E1D;
+    --blue: #0C6FF9;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    background: #f7f7f7;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 1rem;
+    color: #4B4C4D;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 2rem;
+    cursor: pointer;
+    background-color: var(--blue);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 1.8rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.btn:hover {
+    background: var(--orange);
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2%;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3A3938;
+    text-transform: lowercase;
+}
+
+header .logo i {
+    font-size: 1.8rem;
+    padding-right: .5rem;
+    color: var(--orange);
+}
+
+header .navbar a {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    color: #413D45;
+}
+
+header .navbar a:hover {
+    color: var(--orange);
+}
+
+#menu-bar {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #666;
+    border: .1rem solid #666;
+    border-radius: .3rem;
+    padding: .5rem 1.5rem;
+    display: none;
+}
+
+
+
+
+
+/* home section starts */
+
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.home .content {
+  flex: 1 1 40rem;
+  padding-top: 6.5rem;
+}
+
+.home .image {
+  flex: 1 1 40rem;
+}
+
+.home .image img {
+  width: 100%;
+  padding: 1rem;
+}
+
+.home .content h3 {
+  font-size: 5.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.home .content p {
+  font-size: 1.5rem;
+  color: #666;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.home .content img {
+  flex: 1 1 40rem;
+  margin-bottom: 2rem;
+}
+
+
+
+/* speciality section starts */
+
+
+.speciality {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.speciality .image {
+  flex: 1 1 40rem;
+}
+
+.speciality .image img {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.speciality .content .spe {
+    text-decoration: underline 2px;
+    padding-right: 3rem;
+    text-underline-offset: 1rem;
+    font-size: 1.3rem;
+    color: #ccced0;
+}
+
+.speciality .content .spe:hover{
+  color: #4B4C4D;
+}
+
+
+
+
+/* headspaces section starts */
+
+.headspaces {
+  margin-top: 10rem;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.headspaces .btn {
+  display: block;
+  margin: auto;
+  width: 14rem;
+}
+
+.headspaces .image {
+  flex: 1 1 40rem;
+}
+
+.headspaces .image img {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+
+
+/* article section starts */
+
+.articles .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 12rem;
+}
+
+.articles .box-container .box {
+  flex: 1 1 40rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  border: .1rem solid rgba(0, 0, 0, .3);
+  cursor: pointer;
+  border-radius: .5rem;
+  min-height: 50vh;
+}
+
+.articles .box-container .box .content {
+  padding: 2rem;
+  margin: 1.5rem;
+  font-size: 1.2rem;
+  background: #F5F2ED;
+  width: 40%;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.articles .box-container .box .content i{
+  background: var(--orange);
+  width: 2rem;
+  height: 2rem;
+  padding: 0.3rem;
+  border-radius: 3rem;
+  margin-top: 1rem;
+  color: #fff;
+}
+
+.articles .box-container .box .content i:hover{
+  background: #FFCE00;
+  color: #24262b;
+}
+
+#articles-box1 {
+  background: url('./images/Article-1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#articles-box2 {
+  background: url('./images/Article-2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#articles-box3 {
+  background: url('./images/Article-3.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#articles-box4 {
+  background: url('./images/Article-4.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.articles .image {
+  flex: 1 1 40rem;
+}
+
+.articles .image img {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.articles .btn{
+  border-radius: 1rem;
+  background: var(--orange);
+  margin: 1rem;
+}
+
+.articles .btn:hover{
+  background: #FFCE00;
+}
+
+
+
+
+/* Meditation section starts */
+
+
+.Meditation .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  min-height: 100vh;
+  margin-top: 13rem;
+}
+
+.Meditation .box-container .box {
+  flex: 1 1 40rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  border: .1rem solid rgba(0, 0, 0, .3);
+  cursor: pointer;
+  border-radius: .5rem;
+  min-height: 50vh;
+}
+
+.Meditation .box-container .box .content {
+  padding: 2rem;
+  margin: 1.5rem;
+  font-size: 1.2rem;
+  background: #F5F2ED;
+  width: 40%;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.Meditation .box-container .box .content i{
+  background: var(--orange);
+  width: 2rem;
+  height: 2rem;
+  padding: 0.3rem;
+  border-radius: 3rem;
+  margin-top: 1rem;
+  color: #fff;
+}
+
+.Meditation .box-container .box .content i:hover{
+  background: #FFCE00;
+  color: #24262b;
+}
+
+#Meditation-box1 {
+  background: url('./images/Mediation-1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#Meditation-box2 {
+  background: url('./images/Mediation-2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#Meditation-box3 {
+  background: url('./images/Mediation-3.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#Meditation-box4 {
+  background: url('./images/Mediation-4.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#Meditation-box5 {
+  background: url('./images/Mediation-5.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#Meditation-box6 {
+  background: url('./images/Mediation-6.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#Meditation-box7 {
+  background: url('./images/Mediation-7.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#Meditation-box8 {
+  background: url('./images/Mediation-8.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Meditation .box-container .btn{
+  border-radius: 1rem;
+  background: var(--orange);
+  margin: 1rem;
+}
+
+.Meditation .box-container .btn:hover{
+  background: #FFCE00;
+}
+
+
+.Mediation-btn .btn {
+  display: block;
+  margin: auto;
+  width: 10rem;
+  margin-top: 5rem;
+}
+
+
+
+
+
+/* Mindfulness section starts */
+
+.Mindfulness {
+  min-height: 100vh;
+}
+
+.Mindfulness .moreArticles .heading {
+  display: block;
+  margin: auto;
+  width: 32%;
+  margin-top: 6rem;
+}
+
+.Mindfulness .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  flex: 1 1 40rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: .5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.Mindfulness .box-container img {
+  height: 15rem;
+}
+
+.Mindfulness .box-container .content h3 {
+  font-size: 2.5rem;
+  color: #4B4C4D;
+  margin-bottom: 1rem;
+}
+
+.Mindfulness .box-container .content p {
+  text-decoration: underline;
+}
+
+
+.Mindfulness .moreMindful .heading {
+  display: block;
+  margin: auto;
+  width: 60%;
+  margin-top: 8rem;
+}
+
+
+.Mindfulness .moreMindful .icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Mindfulness .moreMindful .icons-container .icons {
+  flex: 1 1 15rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  border: .1rem solid rgba(0, 0, 0, .3);
+  cursor: pointer;
+  border-radius: .5rem;
+  min-height: 50vh;
+  background: #F5F2ED;
+  padding-top: 5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Mindfulness .moreMindful .icons-container .icons .star-icons i {
+  color: var(--orange);
+  font-size: 1.8rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Mindfulness .moreMindful .icons-container .icons i {
+  color: var(--orange);
+  font-size: 3.8rem;
+}
+
+.Mindfulness .moreMindful .icons-container .icons h3 {
+  font-size: 3.8rem;
+  color: #4B4C4D;
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+}
+
+.Mindfulness .moreMindful-btn .btn {
+  display: block;
+  margin: auto;
+  width: 14rem;
+  margin-top: 2.5rem;
+}
+
+
+
+/* footer section starts */
+
+.footer {
+  background-color: #F5F2ED;
+  padding: 70px 0;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer-col {
+  width: 20%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  font-weight: bolder;
+  color: #4B4C4D;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #413D45;
+  text-decoration: none;
+  font-weight: 300;
+  color: #413D45;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: var(--orange);
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+
+
+.end-footer{
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 2rem 2%;
+  background: #413D45;
 }
 
-.App-link {
-  color: #61dafb;
+
+.end-footer .footer-line a{
+  font-size: 1rem;
+  margin-left: 2rem;
+  color: #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.end-footer .footer-icons i{
+  font-size: 2.5rem;
+  background-color: #ffffff;
+  margin-left: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0.6rem;
+}
+
+.end-footer .footer-icons i:hover{
+  background: #333;
+  color: #F5F2ED;
+}
+
+
+
+.end-footer .footer-lang{
+    border: 2px solid white;
+    height: 4rem;
+    width: 16rem;
+    border-radius: 2rem;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.end-footer .footer-lang i{
+    margin-right: 2rem;
+    font-size: 1.2rem;
+}
+
+.end-footer .footer-lang span{
+    margin-right: 1.5rem;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px) {
+
+  html {
+      font-size: 55%;
   }
-  to {
-    transform: rotate(360deg);
+
+  header {
+      padding: 2rem;
+  }
+
+  section {
+      padding: 2rem;
+  }
+
+}
+
+@media(max-width:768px) {
+
+  #menu-bar {
+      display: initial;
+  }
+
+  header .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #f7f7f7;
+      border-top: .1rem solid rgba(0, 0, 0, .1);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  header .navbar a {
+      margin: 1.5rem;
+      padding: 1.5rem;
+      display: block;
+      border: .2rem solid rgba(0, 0, 0, .1);
+      border-left: .5rem solid var(--red);
+      background: #fff;
+  }
+
+  .footer-col {
+      width: 50%;
+      margin-bottom: 30px;
+  }
+
+  .footer-lang{
+    display: none;
+  }
+
+}
+
+
+@media(max-width:450px) {
+
+  html {
+      font-size: 50%;
   }
 }
