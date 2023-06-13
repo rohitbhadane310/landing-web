@@ -1,11 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 
 function Navbar() {
+
+  const { loginWithRedirect } = useAuth0();
+
+  const { logout } = useAuth0();
+
+  const {user, isAuthenticated } = useAuth0();
+
+ 
   return (
     <>
       <header>
-        <a href="#" className="logo">
+        <a href="#" className="logo" id="logo">
           <i className="fa-solid fa-circle"></i>headspace
         </a>
 
@@ -20,16 +30,26 @@ function Navbar() {
         </nav>
 
         <nav className="navbar">
-          <a href="#plans">Plans</a>
+          <Link to="/plans">plans</Link>
           <a href="#Work">Work</a>
           <a href="#About">About</a>
           <a href="#Help">Help</a>
           <a href="#Login">Login</a>
         </nav>
 
-        <a href="#" className="btn">
+        <a href="#" className="btn" id="headBtn">
           Try for free
         </a>
+          {isAuthenticated && <p>
+            {user.name}
+          </p>}
+          {isAuthenticated ? (
+             <a className="btn" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+             Log Out
+            </a>
+          ):(
+            <a className="btn" onClick={() => loginWithRedirect()}>Log In</a>
+          )}
       </header>
     </>
   );

@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+    --orange: #FF7E1D;
+    --blue: #0C6FF9;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    background: #f7f7f7;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 1rem;
+    color: #4B4C4D;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.2rem 2rem;
+    cursor: pointer;
+    background-color: var(--blue);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 1.8rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.btn:hover {
+    background: var(--orange);
+}
+
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3A3938;
+    text-transform: lowercase;
+}
+
+header .logo i {
+    font-size: 1.8rem;
+    padding-right: .5rem;
+    padding-top: 2rem;
+    color: var(--orange);
+}
+
+
+
+/* plans home section starts */
+
+.home {
+    text-align: center;
+}
+
+.home .content {
+    flex: 1 1 40rem;
+    padding-top: 6.5rem;
+}
+
+.home .content h5 {
+    font-size: 1.3rem;
+    color: #413D45;
+    margin-bottom: 1.5rem;
+}
+
+.home .content h3 {
+    font-size: 3.75rem;
+    color: #413D45;
+    margin-bottom: 2rem;
+}
+
+.home .content p {
+    font-size: 1.3rem;
+    display: block;
+    margin: auto;
+    width: 29%;
+    margin-bottom: 2.5rem
+}
+
+.home .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.home .boxes .btn {
+    width: 9%;
+    height: 3rem;
+    border-radius: 1rem;
+    padding-top: 1rem;
+}
+
+.home .boxes .box {
+    flex: 1 1 40rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .3);
+    cursor: pointer;
+    border-radius: .5rem;
+    height: 30vh;
+    padding-top: 3rem;
+}
+
+.home .boxes .box:hover {
+    background: #FFCE00;
+}
+
+.home .boxes .box-content h5 {
+    font-size: 1.5rem;
+    width: 17rem;
+    padding: 2rem;
+}
+
+.home .boxes .box-content p {
+    font-size: 1.4rem;
+    width: 18rem;
+}
+
+.home .boxes .check-box {
+    float: right;
+    width: 200px;
+    margin: -57px 0px;
+    height: 4rem;
+}
+
+input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+}
+
+.home .plans-para {
+    margin-top: 3rem;
+}
+
+.home .conditions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.3rem;
+    margin-bottom: 3rem;
+    color: var(--orange);
+    font-weight: bolder;
+}
+
+
+
+
+/* student-pricing starts */
+
+.student .image {
+    flex: 1 1 40rem;
+}
+
+.student .image img {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.student h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 1rem;
+    color: #4B4C4D;
+}
+
+.student .student-pricing {
+    display: block;
+    margin: auto;
+    width: 33rem;
+    margin-top: 2rem;
+    border: 2px;
+}
+
+.student .student-pricing .btn {
+    margin-right: 2rem;
+    background: #F2F2F2;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .3);
+    cursor: pointer;
+    color: #413D45;
+}
+
+.student .student-pricing .btn:hover {
+    background: #413D45;
+    color: #f7f7f7;
+}
+
+
+
+
+
+
+
+/* unlock section starts */
+
+
+.unlock {
+    margin-top: 10rem;
+    min-height: 100vh;
+}
+
+.unlock .btn {
+    display: block;
+    margin: auto;
+    width: 14rem;
+    margin-top: 2rem;
+}
+
+.unlock .image {
+    flex: 1 1 40rem;
+}
+
+.unlock .image img {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+
+
+
+
+
+/* mediating section starts */
+
+
+.meditating .heading {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+.meditating .icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.meditating .icons-container .icons {
+    flex: 1 1 15rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .3);
+    cursor: pointer;
+    border-radius: .5rem;
+    min-height: 50vh;
+    background: #F5F2ED;
+    padding-top: 5rem;
+}
+
+.meditating .icons-container .icons .star-icons i {
+    color: var(--orange);
+    font-size: 1.8rem;
+}
+
+.meditating .icons-container .icons i {
+    color: var(--orange);
+    font-size: 3.8rem;
+}
+
+.meditating .icons-container .icons h3 {
+    font-size: 3.8rem;
+    color: #4B4C4D;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+}
+
+.meditating .meditating-btn .btn {
+    display: block;
+    margin: auto;
+    width: 14rem;
+    margin-top: 2.5rem;
+}
+
+
+
+
+/* about section starts */
+
+/* .about {
+    min-height: 100vh;
+}
+
+.about .wrapper{
+    max-height: 120px;
+    border: 1px solid #ddd;
+    display: flex;
+    overflow-x: auto;
+}
+
+.about .wrapper::-webkit-scrollbar{
+    width: 0;
+}
+
+.about .wrapper .item{
+    min-width: 110px;
+    height: 110px;
+    line-height: 110px;
+    text-align: center;
+    background-color: #ddd;
+} */
+
+
+
+/* endplans section starts */
+
+.endplans .headspaceplan{
+    display: flex;
+    min-height: 100vh;
+}
+
+.endplans .headspaceplan.image{
+    flex: 1 1 40rem;
+}
+
+.endplans .headspaceplan .image img{
+    width: 123%;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.endplans .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 16rem;
+}
+
+.endplans .content h3{
+    font-size: 4rem;
+    padding: 1rem;
+}
+
+.endplans .content p{
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+.endplans .content p span{
+    padding: 1rem;
+    color: var(--orange);
+}
+
+
+
+
+
+/* endprice section starts */
+
+
+.endsprice{
+    text-align: center;
+}
+
+.endsprice .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.endsprice .boxes .btn {
+    width: 9%;
+    height: 3rem;
+    border-radius: 1rem;
+    padding-top: 1rem;
+}
+
+.endsprice .boxes .box {
+    flex: 1 1 40rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .3);
+    cursor: pointer;
+    border-radius: .5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.endsprice .boxes .box:hover {
+    background: #FFCE00;
+}
+
+.endsprice .boxes .box-content h5 {
+    font-size: 1.5rem;
+    padding: 2rem;
+    padding-right: 22rem;
+}
+
+.endsprice .boxes .check-box {
+    float: right;
+    width: 200px;
+    margin: -46px;
+    height: 4rem
+}
+
+input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+}
+
+.endsprice .plans-para {
+    margin-top: 3rem;
+}
+
+.endsprice .conditions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.3rem;
+    margin-bottom: 3rem;
+    color: var(--orange);
+    font-weight: bolder;
+}
+
+
+
+/* footer endline starts */
+
+
+.end-footer{
+    display: flex;
+    align-items: center;
+    padding: 2rem 2%;
+    background: #413D45;
+}
+
+
+.end-footer .footer-line a{
+    font-size: 1rem;
+    margin-left: 2rem;
+    color: #ffffff;
+}
+
+
+#plans-foot{
+  justify-content: center;
+}
